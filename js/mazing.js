@@ -50,7 +50,7 @@ function Position(x, y) {
     mazeOutputDiv.appendChild(this.mazeMessage);
   
     mazeOutputDiv.style.width = this.mazeContainer.scrollWidth + "px";
-    this.setMessage("first find the key");
+    this.setMessage("Help Elfie get home in time for a net-zero holiday!");
   
     this.mazeContainer.insertAdjacentElement("afterend", mazeOutputDiv);
   
@@ -85,7 +85,7 @@ function Position(x, y) {
     this.heroHasKey = true;
     this.heroScore += 20;
     this.mazeScore.classList.add("has-key");
-    this.setMessage("you have the charger!");
+    this.setMessage("You got the sweater!");
   };
   
   Mazing.prototype.gameOver = function(text) {
@@ -99,7 +99,7 @@ function Position(x, y) {
     this.mazeScore.classList.remove("has-key");
     this.maze[this.heroPos].classList.remove("door");
     this.heroScore += 50;
-    this.gameOver("you finished !!!");
+    this.gameOver("You did it! Happy Holidays!");
   };
   
   Mazing.prototype.tryMoveHero = function(pos) {
@@ -127,7 +127,7 @@ function Position(x, y) {
       if(this.heroHasKey) {
         this.heroWins();
       } else {
-        this.setMessage("you need a key to unlock the door");
+        this.setMessage("You forgot your Dunsky sweater!");
         return;
       }
     }

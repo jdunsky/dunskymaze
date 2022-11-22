@@ -52,8 +52,8 @@
   }
   #maze div div {
     position: relative;
-    width: 1.4em;
-    height: 1.4em;
+    width: 1.8em;
+    height: 1.8em;
   }
   #maze div div::after {
     position: absolute;
@@ -66,33 +66,58 @@
   }
   #maze div div.door.exit::after {
     display: inline-block;
-    width: 1.4em;
-    height: 1.4em;
+    width: 1.8em;
+    height: 1.8em;
+    content: "";
+    background: url(../images/home.png);
+    background-size: 100%;
+  }
+  #maze div div.nubbin::after {
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
     content: "";
     background: url(../images/charger.png);
     background-size: 100%;
   }
-  #maze div div.nubbin::after {
-    content: "\1F33C";
-  }
   #maze div.nubbin:nth-of-type(3n)::after {
-    content: "\1F344";
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    content: "";
+    background: url(../images/charger.png);
+    background-size: 100%;
   }
   #maze div.nubbin:nth-of-type(5n)::after {
-    content: "\1F33B";
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    content: "";
+    background: url(../images/charger.png);
+    background-size: 100%;
   }
   #maze div.nubbin:nth-of-type(7n)::after {
-    content: "\1F48E";
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    content: "";
+    background: url(../images/charger.png);
+    background-size: 100%;
   }
   #maze div.nubbin:nth-of-type(13n)::after {
-    content: "\1F381";
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    content: "";
+    background: url(../images/charger.png);
+    background-size: 100%;
   }
   #maze div.hero::after {
     display: inline-block;
-    width: 1.4em;
-    height: 1.4em;
+    width: 1.8em;
+    height: 1.8em;
     content: "";
-    background: url(../images/elfie_car.png);
+    background: url(../images/elfie.png);
     background-size: 100%;
 
   }
@@ -100,9 +125,9 @@
     transform: scale(-1, 1);
   }
   #maze div div.wall, #maze div div.nubbin.wall, #maze div div.door.exit {
-    background-color: #698CBF;
-    background-image: linear-gradient(45deg, #85B1F2 25%, transparent 55%);
-    background-size: 1.4em;
+    background-color: #85B1F2;
+    background-image: linear-gradient(45deg, #698CBF 25%, transparent 55%);
+    background-size: 1.8em;
   }
   #maze div div.nubbin.wall::after {
     content: "";
@@ -117,14 +142,18 @@
     content: "\1F40D";
   }
   #maze div div.key::after {
-    content: "\1F511";
+    width: 1.8em;
+    height: 1.8em;
+    content: "";
+    background: url(../images/sweater.png);
+    background-size: 100%;
   }
   
   #maze div div:nth-child(odd) {
-    width: 1.4em;
+    width: 1.8em;
   }
   #maze div:nth-child(odd) div {
-    height: 1.4em;
+    height: 1.8em;
   }
   
   #maze.finished::after {
@@ -164,8 +193,11 @@
     content: "Score: ";
   }
   #maze_score.has-key::after {
-    content: "\00a0\1F511";
+    content: "";
+    background: url(../images/sweater.png);
+    background-size: 100%;
   }
+  
   #maze_message {
     flex: 3;
     text-align: right;
