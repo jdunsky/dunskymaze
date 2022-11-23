@@ -31,8 +31,14 @@
     animation: snow 20s linear infinite;
   }
 
+#logo img{
+  max-width:250px;
+  padding-bottom:2em;
+}
+
 #maze_page {
   display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height:100vh;
@@ -165,7 +171,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    content: "Game Over";
+    content: "Thanks for playing!";
     background: rgba(0,0,0,0.4);
     text-transform: uppercase;
     font-family: monospace;
@@ -197,7 +203,7 @@
     background: url(../images/sweater.png);
     background-size: 100%;
   }
-  
+
   #maze_message {
     flex: 3;
     text-align: right;
