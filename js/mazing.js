@@ -50,7 +50,7 @@ function Position(x, y) {
     mazeOutputDiv.appendChild(this.mazeMessage);
   
     mazeOutputDiv.style.width = this.mazeContainer.scrollWidth + "px";
-    this.setMessage("Help Elfie get home in time for a net-zero holiday!");
+    this.setMessage("Help the Energy Transition Elf get home in time for a net-zero holiday!");
   
     this.mazeContainer.insertAdjacentElement("afterend", mazeOutputDiv);
   
