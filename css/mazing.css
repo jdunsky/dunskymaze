@@ -24,28 +24,62 @@
     margin:0 auto;
     background-color: #CDDBF0; 
     background-image: url('https://designshack.net/tutorialexamples/letitsnow/snow.png'), url('https://designshack.net/tutorialexamples/letitsnow/snow3.png'), url('https://designshack.net/tutorialexamples/letitsnow/snow2.png');
-    
     -webkit-animation: snow 20s linear infinite;
     -moz-animation: snow 20s linear infinite;
     -ms-animation: snow 20s linear infinite;
     animation: snow 20s linear infinite;
   }
 
-#music {
+
+#play-pause img {
+  width:1.4em;
+}
+
+#player-container #play-pause {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 position:absolute;
 top:0;
+  padding:1em;
+cursor: pointer;
+z-index:98;
+}
+
+#player-container p {
 display:flex;
-align-items: left;
-flex-direction: column;
+margin:0;
 font-family: sans-serif;
 font-size:0.8em;
-padding-bottom:2em;
-padding-left:2em;
+}
+
+.play {
+background-image: url(../images/music.png);
+}
+.pause {
+  background-image: url(../images/music.png);
 }
 
 #logo img{
   max-width:250px;
   padding-bottom:2em;
+}
+
+#gamestart {
+  position: absolute;
+  min-height:100vh;
+  min-width:100vw;
+  background-color: rgba(205,219,240,0.6);
+display:flex;
+justify-content: center;
+align-items: center;
+z-index:98;
+}
+
+#gamestart h1 {
+  opacity:1!important; 
+  font-family: sans-serif;
 }
 
 #maze_page {

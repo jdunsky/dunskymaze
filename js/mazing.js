@@ -83,7 +83,7 @@ function Position(x, y) {
   Mazing.prototype.heroTakeKey = function() {
     this.maze[this.heroPos].classList.remove("key");
     this.heroHasKey = true;
-    this.heroScore += 20;
+    this.heroScore += 10;
     this.mazeScore.classList.add("has-key");
     this.setMessage("You got the sweater!");
   };
@@ -127,7 +127,7 @@ function Position(x, y) {
       if(this.heroHasKey) {
         this.heroWins();
       } else {
-        this.setMessage("You forgot your Dunsky sweater!");
+        this.setMessage("You forgot your Dunsky holiday sweater!");
         return;
       }
     }
@@ -151,7 +151,7 @@ function Position(x, y) {
     }
     if(this.heroScore >= 1) {
       if(!this.childMode) {
-        this.heroScore--;
+        this.heroScore;
       }
       if(!this.childMode && (this.heroScore <= 0)) {
         this.gameOver("sorry, you didn't make it");

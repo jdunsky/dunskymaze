@@ -11,10 +11,12 @@
 
 <body>
 
+  
   <div id="maze_page">
+    <div onclick="startGame();playMusic()" id="gamestart"><button><h1>Start</h1></button></div>
     <div id="logo"><img src="images/dunsky_logo_en.png" alt="Dunsky logo"></div>
     <div id="maze_container">
-      <div id="maze" data-steps="242">
+      <div id="maze" data-steps="2">
           <div>
             <div class="wall"></div>
             <div class="wall"></div>
@@ -694,7 +696,14 @@
     </div>
   </div>
 
-
+  <audio id="track" loop="true">
+    <source src="music/game_music.mp3" type="audio/mp3" />
+  </audio>
+  
+  <div id="player-container">
+    <div id="play-pause" class="play"><img src="images/music.png"></img><p>on/off</p></div>
+    
+  </div>
   <!-- <script src="js/maze-builder.js"></script>
         <script>
         
@@ -703,6 +712,43 @@
           Maze.display("maze_container");
         
         </script> -->
+
+<script>
+  var track = document.getElementById('track');
+
+var controlBtn = document.getElementById('play-pause');
+
+function playPause() {
+    if (track.paused) {
+        track.play();
+        //controlBtn.textContent = "Pause";
+        controlBtn.className = "pause";
+    } else { 
+        track.pause();
+         //controlBtn.textContent = "Play";
+        controlBtn.className = "play";
+    }
+}
+
+controlBtn.addEventListener("click", playPause);
+track.addEventListener("ended", function() {
+  controlBtn.className = "play";
+});
+</script>
+
+<script>
+function startGame() {
+document.getElementById("gamestart").style.opacity = "0";
+}
+</script>
+
+<script>
+  function playMusic() {
+  var audio = document.getElementById("track");
+        audio.play();
+}
+</script>
+
 
   <script src="js/mazing.js"></script>
   <script>
@@ -714,10 +760,8 @@
 
   </script>
 
-<div id="music"><p>Press play to add music</p><audio controls autoplay="true" loop="true">
-  <source src="music/game_music.mp3" type="audio/mp3">
-</audio>
-</div>
+
+
 </body>
 
 </html>
