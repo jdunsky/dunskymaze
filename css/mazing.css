@@ -92,6 +92,8 @@ z-index:98;
 align-items: center;
 flex-direction: column;
 z-index:100;
+font-family: sans-serif;
+text-align:center;
 }
 
 #maze_page {
