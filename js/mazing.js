@@ -93,12 +93,14 @@ function Position(x, y) {
     document.removeEventListener("keydown", this.keyPressHandler, false);
     this.setMessage(text);
     this.mazeContainer.classList.add("finished");
+    document.getElementById("gameover").style.display = "flex";
+    document.body.innerHTML = document.body.innerHTML.replace('finalscore', this.heroScore);
   };
   
   Mazing.prototype.heroWins = function() {
     this.mazeScore.classList.remove("has-key");
     this.maze[this.heroPos].classList.remove("door");
-    this.heroScore += 50;
+    this.heroScore += 0;
     this.gameOver("You did it! Happy Holidays!");
   };
   

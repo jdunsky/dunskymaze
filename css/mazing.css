@@ -82,6 +82,18 @@ z-index:98;
   font-family: sans-serif;
 }
 
+#gameover {
+  display:none;
+  position: absolute;
+  min-height:100vh;
+  min-width:100vw;
+  background-color: rgba(205,219,240,0.6);
+  justify-content: center;
+align-items: center;
+flex-direction: column;
+z-index:100;
+}
+
 #maze_page {
   display:flex;
   flex-direction: column;
@@ -226,6 +238,7 @@ z-index:98;
     color: #fff;
     z-index: 10;
   }
+
   
   #maze_output {
     display: flex;
