@@ -1,4 +1,32 @@
-/*Keyframes*/
+
+@font-face {
+  font-family: 'avenir_next_lt_proregular';
+  src: url('../fonts/avenir_1-webfont.woff2') format('woff2'),
+       url('../fonts/avenir_1-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'avenir_next_lt_probold';
+  src: url('../fonts/avenir_4-webfont.woff2') format('woff2'),
+       url('../fonts/avenir_4-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'avenir_next_lt_prodemi';
+  src: url('../fonts/avenir_2-webfont.woff2') format('woff2'),
+       url('../fonts/avenir_2-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}/*Keyframes*/
 @keyframes snow {
   0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
    100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
@@ -28,8 +56,12 @@
     -moz-animation: snow 20s linear infinite;
     -ms-animation: snow 20s linear infinite;
     animation: snow 20s linear infinite;
+    font-family: 'avenir_next_lt_proregular', sans-serif;
   }
 
+  h1 {
+    font-family: 'avenir_next_lt_proregular', sans-serif;
+  }
 
 #play-pause img {
   width:1.4em;
@@ -50,7 +82,7 @@ z-index:98;
 #player-container p {
 display:flex;
 margin:0;
-font-family: sans-serif;
+font-family: 'avenir_next_lt_proregular', sans-serif;
 font-size:0.8em;
 }
 
@@ -61,16 +93,35 @@ background-image: url(../images/music.png);
   background-image: url(../images/music.png);
 }
 
+#maze_page {
+  display:grid;
+  grid-template-columns: 1fr 1.5fr 2fr 1fr;
+  grid-template-rows: 20vh 1fr;
+    min-height:100vh;
+    min-width:100vw;
+  align-items:flex-start;
+}
+
+#logo {
+  grid-column:3/4;
+  grid-row:1/2;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100%;
+}
+
+
 #logo img{
   max-width:250px;
-  padding-bottom:2em;
+  
 }
 
 #gamestart {
   position: absolute;
-  min-height:100vh;
+  height:100%;
   min-width:100vw;
-  background-color: rgba(205,219,240,0.6);
+  background-color: rgba(205,219,240,0.8);
 display:flex;
 justify-content: center;
 align-items: center;
@@ -78,22 +129,33 @@ flex-direction: column;
 z-index:98;
 }
 
-#gamestart h1 {
-  opacity:1!important; 
-  font-family: sans-serif;
+#gamestart img {
+  max-width:2em;
 }
+
+#gamestart h1 {
+  margin:2em;
+}
+
+
+
+
 
 #scoreboard {
   display:grid;
   grid-template-columns: 1fr 1fr;
   background: white;
   padding:1em;
+  grid-column:2/3;
+  grid-row:2/3;
+  margin-right:1em;
 }
 
 .points {
   grid-column: 1/3;
   text-align:center;
   background: #CDDBF0;
+  
 }
 
 .itemscore {
@@ -102,6 +164,7 @@ z-index:98;
   grid-template-columns: 1fr 3fr;
   place-items: center;
   margin:.4em;
+  font-size:.8em;
 }
 
 .itemscore img {
@@ -112,6 +175,7 @@ z-index:98;
 
 button {
   margin-top:1em;
+  font-family: 'avenir_next_lt_proregular' sans-serif;
 }
 
 #gameover {
@@ -124,21 +188,17 @@ button {
 align-items: center;
 flex-direction: column;
 z-index:100;
-font-family: sans-serif;
+font-family: 'avenir_next_lt_proregular', sans-serif;
 text-align:center;
 }
 
-#maze_page {
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height:100vh;
-}
+
 
 #maze_container {
     position: relative;
     display: inline-block;
+    grid-column: 3/4;
+    grid-row:2/3;
   }
   #maze {
     position: relative;
@@ -266,7 +326,7 @@ text-align:center;
     content: "Thanks for playing!";
     background: rgba(0,0,0,0.4);
     text-transform: uppercase;
-    font-family: monospace;
+    font-family: 'avenir_next_lt_probold', sans-serif;
     font-size: 5em;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
     color: #fff;
@@ -279,7 +339,7 @@ text-align:center;
     margin: 0.5em auto;
   }
   #maze_score, #maze_message {
-    font-family: sans-serif;
+    font-family: 'avenir_next_lt_proregular', sans-serif;
     font-weight: bold;
     font-size: 1em;
   }
