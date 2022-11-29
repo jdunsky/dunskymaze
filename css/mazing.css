@@ -135,11 +135,8 @@ z-index:98;
 
 #gamestart h1 {
   margin:2em;
+  text-align:center;
 }
-
-
-
-
 
 #scoreboard {
   display:grid;
