@@ -74,12 +74,44 @@ background-image: url(../images/music.png);
 display:flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
 z-index:98;
 }
 
 #gamestart h1 {
   opacity:1!important; 
   font-family: sans-serif;
+}
+
+#scoreboard {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background: white;
+  padding:1em;
+}
+
+.points {
+  grid-column: 1/3;
+  text-align:center;
+  background: #CDDBF0;
+}
+
+.itemscore {
+  grid-column:1/3;
+  display:grid;
+  grid-template-columns: 1fr 3fr;
+  place-items: center;
+  margin:.4em;
+}
+
+.itemscore img {
+  max-width:2.4em;
+  display:flex;
+  
+}
+
+button {
+  margin-top:1em;
 }
 
 #gameover {
@@ -151,7 +183,7 @@ text-align:center;
     width: 1.8em;
     height: 1.8em;
     content: "";
-    background: url(../images/charger.png);
+    background: url(../images/smartthermo.png);
     background-size: 100%;
   }
   #maze div.nubbin:nth-of-type(5n)::after {
@@ -159,7 +191,7 @@ text-align:center;
     width: 1.8em;
     height: 1.8em;
     content: "";
-    background: url(../images/charger.png);
+    background: url(../images/heatpump.png);
     background-size: 100%;
   }
   #maze div.nubbin:nth-of-type(7n)::after {
@@ -167,15 +199,15 @@ text-align:center;
     width: 1.8em;
     height: 1.8em;
     content: "";
-    background: url(../images/charger.png);
+    background: url(../images/bioenergy.png);
     background-size: 100%;
   }
-  #maze div.nubbin:nth-of-type(13n)::after {
+  #maze div.nubbin:nth-of-type(11n)::after {
     display: inline-block;
     width: 1.8em;
     height: 1.8em;
     content: "";
-    background: url(../images/charger.png);
+    background: url(../images/solarpanel.png);
     background-size: 100%;
   }
   #maze div.hero::after {

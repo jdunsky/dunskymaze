@@ -26,7 +26,7 @@ function Position(x, y) {
   
     this.maze = [];
     this.heroPos = {};
-    this.heroHasKey = false;
+    this.heroHasKey = true;
     this.childMode = false;
   
     this.utter = null;

@@ -10,700 +10,718 @@
 </head>
 
 <body>
-
-  
   <div id="maze_page">
-    <div onclick="startGame();playMusic()" id="gamestart"><button><h1>Start</h1></button></div>
-    <div id="gameover"><h1>Way to go - you got the Energy Transition Elf home! Share your final score with Dunsky to donate to charity.</h1><a href="http://www.surveymonkey.com" target="_blank"><button><h1>Donate finalscore $ to charity</h1></button></a></div>
+    <div onclick="startGame();playMusic()" id="gamestart">
+      <h1>Use the arrows on your keyboard (↑)(↓)(→)(←) to move the Elf through the maze</h1>
+      <div id="scoreboard">
+        <div class="points"><h3>Scoreboard</h3></div>
+        <div class="itemscore"><img src="images/heatpump.png"><p>Heat pump = 10 pts</p></div>
+        <div class="itemscore"><img src="images/solarpanel.png"><p>Solar panel = 10 pts</p></div>
+        <div class="itemscore"><img src="images/smartthermo.png"><p>Smart thermostat = 10 pts</p></div>
+        <div class="itemscore"><img src="images/charger.png"><p>EV charger = 10 pts</p></div>
+        <div class="itemscore"><img src="images/bioenergy.png"><p>Bioenergy = 10 pts</p></div>
+        <div class="itemscore"><img src="images/sweater.png"><p> *BONUS* Holiday sweater = 20 pts</p></div>
+      </div><button>
+        <h1>Start</h1>
+      </button>
+    </div>
+    <div id="gameover">
+      <h1>Congrats! The Energy Transition Elf made it home! Share your final score (underneath the maze) with Dunsky and we’ll make a donation to charity.
+      </h1><a href="http://www.surveymonkey.com" target="_blank"><button>
+          <h1>Click to share your finalscore</h1>
+        </button></a>
+    </div>
     <div id="logo"><img src="images/dunsky_logo_en.png" alt="Dunsky logo"></div>
     <div id="maze_container">
       <div id="maze" data-steps="2">
-          <div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="door exit"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="key"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="nubbin"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="nubbin"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="nubbin"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="nubbin"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="wall"></div>
-          </div>
-          <div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="door entrance hero"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-            <div class="wall"></div>
-          </div>
+        <div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="door exit"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
         </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="nubbin"></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="nubbin"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="key"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="nubbin"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="nubbin"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="nubbin"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="nubbin"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="nubbin"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="nubbin"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="nubbin"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class="nubbin"></div>
+          <div class=""></div>
+          <div class="wall"></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
+          <div class="wall"></div>
+        </div>
+        <div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="door entrance hero"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+          <div class="wall"></div>
+        </div>
+      </div>
     </div>
   </div>
 
   <audio id="track" loop="true">
     <source src="music/game_music.mp3" type="audio/mp3" />
   </audio>
-  
+
   <div id="player-container">
-    <div id="play-pause" class="play"><img src="images/music.png"></img><p>on/off</p></div>
-    
+    <div id="play-pause" class="play"><img src="images/music.png"></img>
+      <p>on/off</p>
+    </div>
+
   </div>
   <!-- <script src="js/maze-builder.js"></script>
         <script>
@@ -714,41 +732,41 @@
         
         </script> -->
 
-<script>
-  var track = document.getElementById('track');
+  <script>
+    var track = document.getElementById('track');
 
-var controlBtn = document.getElementById('play-pause');
+    var controlBtn = document.getElementById('play-pause');
 
-function playPause() {
-    if (track.paused) {
+    function playPause() {
+      if (track.paused) {
         track.play();
         //controlBtn.textContent = "Pause";
         controlBtn.className = "pause";
-    } else { 
+      } else {
         track.pause();
-         //controlBtn.textContent = "Play";
+        //controlBtn.textContent = "Play";
         controlBtn.className = "play";
+      }
     }
-}
 
-controlBtn.addEventListener("click", playPause);
-track.addEventListener("ended", function() {
-  controlBtn.className = "play";
-});
-</script>
+    controlBtn.addEventListener("click", playPause);
+    track.addEventListener("ended", function () {
+      controlBtn.className = "play";
+    });
+  </script>
 
-<script>
-function startGame() {
-document.getElementById("gamestart").style.opacity = "0";
-}
-</script>
+  <script>
+    function startGame() {
+      document.getElementById("gamestart").style.display = "none";
+    }
+  </script>
 
-<script>
-  function playMusic() {
-  var audio = document.getElementById("track");
-        audio.play();
-}
-</script>
+  <script>
+    function playMusic() {
+      var audio = document.getElementById("track");
+      audio.play();
+    }
+  </script>
 
 
   <script src="js/mazing.js"></script>
