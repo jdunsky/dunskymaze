@@ -101,7 +101,7 @@ function Position(x, y) {
     this.mazeScore.classList.remove("has-key");
     this.maze[this.heroPos].classList.remove("door");
     this.heroScore += 0;
-    this.gameOver("You did it! Happy Holidays!");
+    this.gameOver("");
   };
   
   Mazing.prototype.tryMoveHero = function(pos) {
@@ -158,7 +158,7 @@ function Position(x, y) {
       if(!this.childMode && (this.heroScore <= 0)) {
         this.gameOver("sorry, you didn't make it");
       } else {
-        this.setMessage("...");
+        this.setMessage("");
       }
     }
   };
