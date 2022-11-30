@@ -335,7 +335,6 @@ text-align:center;
   
   #maze_output {
     display: flex;
-    margin: 0.5em auto;
   }
   #maze_score, #maze_message {
     font-family: 'avenir_next_lt_proregular', sans-serif;
