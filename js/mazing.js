@@ -50,7 +50,7 @@ function Position(x, y) {
     mazeOutputDiv.appendChild(this.mazeMessage);
   
     mazeOutputDiv.style.width = this.mazeContainer.scrollWidth + "px";
-    this.setMessage("Help the Energy Transition Elf get home in time for a net-zero holiday!");
+    this.setMessage("");
   
     this.mazeContainer.insertAdjacentElement("afterend", mazeOutputDiv);
   
@@ -77,7 +77,7 @@ function Position(x, y) {
   Mazing.prototype.heroTakeTreasure = function() {
     this.maze[this.heroPos].classList.remove("nubbin");
     this.heroScore += 10;
-    this.setMessage("yay, treasure!");
+    this.setMessage("Yay! You collected a clean energy item");
   };
   
   Mazing.prototype.heroTakeKey = function() {
@@ -85,7 +85,7 @@ function Position(x, y) {
     this.heroHasKey = true;
     this.heroScore += 10;
     this.mazeScore.classList.add("has-key");
-    this.setMessage("You got the sweater!");
+    this.setMessage("You got the bonus Holiday sweater!");
   };
   
   Mazing.prototype.gameOver = function(text) {

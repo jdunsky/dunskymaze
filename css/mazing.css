@@ -158,8 +158,9 @@ z-index:98;
 .itemscore {
   grid-column:1/3;
   display:grid;
-  grid-template-columns: 1fr 3fr;
-  text-align:center;
+  grid-template-columns: 1fr 3fr 1fr;
+  text-align:left;
+  column-gap: 0.2em;
   margin:0.5em;
   font-size:.8em;
 }
