@@ -95,7 +95,7 @@ background-image: url(../images/music.png);
 
 #maze_page {
   display:grid;
-  grid-template-columns: 1fr 1.5fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
   grid-template-rows: 20vh 1fr;
     min-height:100vh;
     min-width:100vw;
@@ -140,7 +140,7 @@ z-index:98;
 
 #scoreboard {
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(200px,250px);
   background: white;
   padding:1em;
   grid-column:2/3;
