@@ -203,6 +203,7 @@ text-align:center;
     position: relative;
     background-color: #CDDBF0;
     background-size: 8em 8em;
+    justify-self: center;
   }
   #maze div {
     display: flex;
