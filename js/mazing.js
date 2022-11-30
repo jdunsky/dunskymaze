@@ -83,9 +83,9 @@ function Position(x, y) {
   Mazing.prototype.heroTakeKey = function() {
     this.maze[this.heroPos].classList.remove("key");
     this.heroHasKey = true;
-    this.heroScore += 10;
+    this.heroScore += 20;
     this.mazeScore.classList.add("has-key");
-    this.setMessage("You got the bonus Holiday sweater!");
+    this.setMessage("You got the bonus Dunsky Holiday sweater!");
   };
   
   Mazing.prototype.gameOver = function(text) {
