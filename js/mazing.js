@@ -46,18 +46,28 @@ function Position(x, y) {
     var mazeOutputDiv = document.createElement("div");
     mazeOutputDiv.id = "maze_output";
   
-    mazeOutputDiv.appendChild(this.mazeScore);
+    //mazeOutputDiv.appendChild(this.mazeScore);
     mazeOutputDiv.appendChild(this.mazeMessage);
-  
-    mazeOutputDiv.style.width = this.mazeContainer.scrollWidth + "px";
+ 
     this.setMessage("");
   
     this.mazeContainer.insertAdjacentElement("afterend", mazeOutputDiv);
+
+    var mazeScoreDiv = document.createElement("div");
+    mazeScoreDiv.id ="maze_scoreboard";
+
+    mazeScoreDiv.appendChild(this.mazeScore);
+
+    this.setMessage("");
+  
+    this.mazeContainer.insertAdjacentElement("afterend", mazeScoreDiv);
   
     // activate control keys
     this.keyPressHandler = this.mazeKeyPressHandler.bind(this);
     document.addEventListener("keydown", this.keyPressHandler, false);
   };
+
+  
   
   Mazing.prototype.enableSpeech = function() {
     this.utter = new SpeechSynthesisUtterance()
@@ -73,13 +83,20 @@ function Position(x, y) {
       window.speechSynthesis.speak(this.utter);
     }
   };
-  
+
+  Mazing.prototype.heroTakeCharger = function() {
+    this.maze[this.heroPos].classList.remove("evcharger");
+    this.heroScore += 10;
+    this.setMessage("Yay! You got the EV charger!");
+  };
+
   Mazing.prototype.heroTakeTreasure = function() {
     this.maze[this.heroPos].classList.remove("nubbin");
     this.heroScore += 10;
     this.setMessage("Yay! You collected a clean energy item");
-  };
-  
+  }
+;
+
   Mazing.prototype.heroTakeKey = function() {
     this.maze[this.heroPos].classList.remove("key");
     this.heroHasKey = true;
@@ -94,7 +111,7 @@ function Position(x, y) {
     this.setMessage(text);
     this.mazeContainer.classList.add("finished");
     document.getElementById("gameover").style.display = "flex";
-    document.body.innerHTML = document.body.innerHTML.replace('finalscore', this.heroScore);
+
   };
   
   Mazing.prototype.heroWins = function() {
@@ -142,6 +159,10 @@ function Position(x, y) {
     // after moving
     if(nextStep.match(/nubbin/)) {
       this.heroTakeTreasure();
+      return;
+    }
+    if(nextStep.match(/evcharger/)) {
+      this.heroTakeCharger();
       return;
     }
     if(nextStep.match(/key/)) {
