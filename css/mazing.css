@@ -29,59 +29,35 @@
 
 /*Keyframes*/
 @keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+   100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
   }
-
-  100% {
-    background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;
+  
+  @-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
   }
-}
-
-@-moz-keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
+  
+  @-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+   50% {background-color:#CDDBF0;}
+   100% {background-position: 500px 1000px, 400px 400px, 300px 300px; background-color:#CDDBF0;}
   }
-
-  100% {
-    background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;
+  
+  @-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+   100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
   }
-}
-
-@-webkit-keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
-  }
-
-  50% {
-    background-color: #CDDBF0;
-  }
-
-  100% {
-    background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;
-    background-color: #CDDBF0;
-  }
-}
-
-@-ms-keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
-  }
-
-  100% {
-    background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;
-  }
-}
 
 body {
   max-height: 100vh;
   margin: 0 auto;
   background-color: #CDDBF0;
   background-image: url('https://designshack.net/tutorialexamples/letitsnow/snow.png'), url('https://designshack.net/tutorialexamples/letitsnow/snow3.png'), url('https://designshack.net/tutorialexamples/letitsnow/snow2.png');
-  -webkit-animation: snow 10s linear infinite;
-  -moz-animation: snow 10s linear infinite;
-  -ms-animation: snow 10s linear infinite;
-  animation: snow 10s linear infinite;
+  -webkit-animation: snow 20s linear infinite;
+  -moz-animation: snow 20s linear infinite;
+  -ms-animation: snow 20s linear infinite;
+  animation: snow 20s linear infinite;
   font-family: 'avenir_next_lt_proregular', sans-serif;
 }
 
@@ -406,7 +382,7 @@ button {
 }
 
 #scorecounter::before {
-  content: "Donation Score";
+  content: "Dunsky Donation Score";
   font-size: 0.6em;
   text-transform: uppercase;
   font-family: 'avenir_next_lt_probold', sans-serif;
@@ -415,7 +391,11 @@ color:white;
 
 #maze_score {
   color:#FFCC00;
-  font-size:3em;
+  font-size:2.4em;
+}
+
+#maze_score::after {
+  content: "$";
 }
 
 /*#maze_score::before {
@@ -430,13 +410,13 @@ color:white;
 }
 
 #scorecounter {
-  position:absolute;
-  background:#333333;
+  background:#013766;
+  border-radius: 0.2em;
   box-sizing: border-box;
  /*border:0.5em solid #FFCC00;*/
-  height:6em;
+  height:7em;
   width:100%;
-  z-index:-2;
+  margin:1em;
   grid-column: 2/3;
   grid-row: 2/3;
   display: flex;
