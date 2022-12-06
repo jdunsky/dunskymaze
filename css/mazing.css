@@ -140,8 +140,9 @@ z-index:98;
 }
 
 #gamestart h1 {
-  margin:1.4em;
+  margin:2em;
   text-align:center;
+  font-size:1.4em;
 }
 
 .points {
