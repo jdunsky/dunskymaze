@@ -140,7 +140,7 @@ z-index:98;
 }
 
 #gamestart h1 {
-  margin:2em;
+  margin:1.4em;
   text-align:center;
 }
 
@@ -197,6 +197,7 @@ text-align:center;
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr;
     grid-template-rows: 0.3fr 2fr;
+    column-gap: 0.2em;
     flex-direction: row;
     max-height:100vh;
   }
