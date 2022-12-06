@@ -1,8 +1,7 @@
-
 @font-face {
   font-family: 'avenir_next_lt_proregular';
   src: url('../fonts/avenir_1-webfont.woff2') format('woff2'),
-       url('../fonts/avenir_1-webfont.woff') format('woff');
+    url('../fonts/avenir_1-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -12,7 +11,7 @@
 @font-face {
   font-family: 'avenir_next_lt_probold';
   src: url('../fonts/avenir_4-webfont.woff2') format('woff2'),
-       url('../fonts/avenir_4-webfont.woff') format('woff');
+    url('../fonts/avenir_4-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -22,80 +21,107 @@
 @font-face {
   font-family: 'avenir_next_lt_prodemi';
   src: url('../fonts/avenir_2-webfont.woff2') format('woff2'),
-       url('../fonts/avenir_2-webfont.woff') format('woff');
+    url('../fonts/avenir_2-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
-}/*Keyframes*/
+}
+
+/*Keyframes*/
 @keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-   100% {background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;}
-  }
-  
-  @-moz-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  100% {background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;}
-  }
-  
-  @-webkit-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-   50% {background-color:#CDDBF0;}
-   100% {background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw; background-color:#CDDBF0;}
-  }
-  
-  @-ms-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-   100% {background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;}
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
   }
 
-  body {
-    max-height:100vh;
-    margin:0 auto;
-    background-color: #CDDBF0; 
-    background-image: url('https://designshack.net/tutorialexamples/letitsnow/snow.png'), url('https://designshack.net/tutorialexamples/letitsnow/snow3.png'), url('https://designshack.net/tutorialexamples/letitsnow/snow2.png');
-    -webkit-animation: snow 10s linear infinite;
-    -moz-animation: snow 10s linear infinite;
-    -ms-animation: snow 10s linear infinite;
-    animation: snow 10s linear infinite;
-    font-family: 'avenir_next_lt_proregular', sans-serif;
+  100% {
+    background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;
+  }
+}
+
+@-moz-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
   }
 
-  h1 {
-    font-family: 'avenir_next_lt_proregular', sans-serif;
+  100% {
+    background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;
   }
+}
+
+@-webkit-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+
+  50% {
+    background-color: #CDDBF0;
+  }
+
+  100% {
+    background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;
+    background-color: #CDDBF0;
+  }
+}
+
+@-ms-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+
+  100% {
+    background-position: 10vh 20vh, 60vh 60vh, 30vw 30vw;
+  }
+}
+
+body {
+  max-height: 100vh;
+  margin: 0 auto;
+  background-color: #CDDBF0;
+  background-image: url('https://designshack.net/tutorialexamples/letitsnow/snow.png'), url('https://designshack.net/tutorialexamples/letitsnow/snow3.png'), url('https://designshack.net/tutorialexamples/letitsnow/snow2.png');
+  -webkit-animation: snow 10s linear infinite;
+  -moz-animation: snow 10s linear infinite;
+  -ms-animation: snow 10s linear infinite;
+  animation: snow 10s linear infinite;
+  font-family: 'avenir_next_lt_proregular', sans-serif;
+}
+
+h1 {
+  font-family: 'avenir_next_lt_proregular', sans-serif;
+}
 
 #play-pause img {
   width: 1.4em;
 }
 
 #player-container {
-  grid-column:2/3;
-  grid-row:1/2;
-  display:flex;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #player-container #play-pause {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:1em;
-cursor: pointer;
-z-index:98;
+  padding: 1em;
+  cursor: pointer;
+  z-index: 98;
 }
 
 #player-container p {
-display:flex;
-margin:0;
-font-family: 'avenir_next_lt_proregular', sans-serif;
-font-size:0.8em;
+  display: flex;
+  margin: 0;
+  font-family: 'avenir_next_lt_proregular', sans-serif;
+  font-size: 0.8em;
 }
 
 .play {
-background-image: url(../images/music.png);
+  background-image: url(../images/music.png);
 }
+
 .pause {
   background-image: url(../images/music.png);
 }
@@ -110,226 +136,246 @@ background-image: url(../images/music.png);
 } */
 
 #logo {
-  grid-row:1/2;
+  grid-row: 1/2;
   grid-column: 3/4;
   display: flex;
   flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 
-#logo img{
-  max-width:200px;
-  
+#logo img {
+  max-width: 200px;
+
 }
 
 #gamestart {
-grid-column: 2/4;
-grid-row:1/3;
-background-color: rgba(205,219,240,0.8);
-display:flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-z-index:98;
+  grid-column: 2/4;
+  grid-row: 1/3;
+  background-color: rgba(205, 219, 240, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 98;
 }
 
 #gamestart img {
-  max-width:2em;
+  max-width: 2em;
 }
 
 #gamestart h1 {
-  margin:2em;
-  text-align:center;
-  font-size:1.2em;
+
+  text-align: center;
+  font-size: 1.2em;
 }
 
 .points {
   grid-column: 1/3;
-  text-align:center;
+  text-align: center;
   background: #CDDBF0;
-  
+
 }
 
 .itemscore {
-  grid-column:1/3;
-  display:grid;
+  grid-column: 1/3;
+  display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  text-align:left;
+  text-align: left;
   column-gap: 0.2em;
-  margin:0.5em;
-  font-size:.8em;
+  margin: 0.5em;
+  font-size: .8em;
 }
 
 .itemscore img {
-  max-width:2.4em;
-  display:flex;
-  
+  max-width: 2.4em;
+  display: flex;
+
 }
 
 button {
-  margin-top:1em;
+  margin-top: 1em;
   font-family: 'avenir_next_lt_proregular' sans-serif;
 }
 
 #gameover {
-  display:none;
+  display: none;
   position: absolute;
-  min-height:100vh;
-  min-width:100vw;
-  background-color: rgba(205,219,240,0.6);
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgba(205, 219, 240, 0.6);
   justify-content: center;
-align-items: center;
-flex-direction: column;
-z-index:100;
-font-family: 'avenir_next_lt_proregular', sans-serif;
-text-align:center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+  font-family: 'avenir_next_lt_proregular', sans-serif;
+  text-align: center;
 }
 
 #gameover h1 {
-  margin:2em;
+  margin: 2em;
 }
 
 #maze_container {
-    position: relative;
-    grid-column: 3/4;
-    grid-row:1/2;
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr;
-    grid-template-rows: 0.3fr 2fr;
-    column-gap: 0.2em;
-    flex-direction: row;
-    max-height:100vh;
-  }
-  #maze {
-    position: relative;
-    grid-column:3/4;
-    grid-row: 2/3;
-    background-color: #CDDBF0;
-    background-size: 8em 8em;
-    justify-self: center;
-  }
-  #maze div {
-    display: flex;
-  }
-  #maze div div {
-    position: relative;
-    width: 1.8em;
-    height: 1.8em;
-  }
-  #maze div div::after {
-    position: absolute;
-    left: -3px;
-    top: -4px;
-    text-align: center;
-    text-shadow: 0 0 1px black;
-    font-size: 1.2em;
-    z-index: 10;
-  }
-  #maze div div.door.exit::after {
-    display: inline-block;
-    width: 1.8em;
-    height: 1.8em;
-    content: "";
-    background: url(../images/home.png);
-    background-size: 100%;
-  }
-  #maze div div.evcharger::after {
-    display: inline-block;
-    width: 1.8em;
-    height: 1.8em;
-    content: "";
-    background: url(../images/charger.png);
-    background-size: 100%;
-  }
+  position: relative;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr;
+  grid-template-rows: 0.3fr 2fr;
+  column-gap: 0.2em;
+  flex-direction: row;
+  max-height: 100vh;
+}
 
-  #maze div.thermo::after {
-    display: inline-block;
-    width: 1.8em;
-    height: 1.8em;
-    content: "";
-    background: url(../images/smartthermo.png);
-    background-size: 100%;
-  }
-  #maze div.heatpump::after {
-    display: inline-block;
-    width: 1.8em;
-    height: 1.8em;
-    content: "";
-    background: url(../images/heatpump.png);
-    background-size: 100%;
-  }
-  #maze div.bioenergy::after {
-    display: inline-block;
-    width: 1.8em;
-    height: 1.8em;
-    content: "";
-    background: url(../images/bioenergy.png);
-    background-size: 100%;
-  }
-  #maze div.solar::after {
-    display: inline-block;
-    width: 1.8em;
-    height: 1.8em;
-    content: "";
-    background: url(../images/solarpanel.png);
-    background-size: 100%;
-  }
-  #maze div.hero::after {
-    display: inline-block;
-    width: 1.8em;
-    height: 1.8em;
-    content: "";
-    background: url(../images/elfie.png);
-    background-size: 100%;
+#maze {
+  position: relative;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background-color: #CDDBF0;
+  background-size: 8em 8em;
+  justify-self: center;
+}
 
-  }
-  #maze.face-right div.hero::after {
-    transform: scale(-1, 1);
-  }
-  #maze div div.wall, #maze div div.nubbin.wall, #maze div div.door.exit {
-    background-color: #85B1F2;
-    background-image: linear-gradient(45deg, #698CBF 25%, transparent 55%);
-    background-size: 1.8em;
-  }
-  #maze div div.nubbin.wall::after {
-    content: "";
-  }
-  #maze div div.sentinel.wall {
-    background: transparent;
-  }
-  #maze div div.sentinel.wall::after {
-    content: "\1F40A";
-  }
-  #maze div.sentinel.wall:nth-of-type(3n)::after {
-    content: "\1F40D";
-  }
-  #maze div div.key::after {
-    width: 1.8em;
-    height: 1.8em;
-    content: "";
-    background: url(../images/sweater.png);
-    background-size: 100%;
-  }
+#maze div {
+  display: flex;
+}
 
-  #maze div div.sweater::after {
-    width: 1.8em;
-    height: 1.8em;
-    content: "";
-    background: url(../images/sweater.png);
-    background-size: 100%;
-  }
-  
-  #maze div div:nth-child(odd) {
-    width: 1.8em;
-  }
-  #maze div:nth-child(odd) div {
-    height: 1.8em;
-  }
-  
-  #maze.finished::after {
-    /* position: absolute;
+#maze div div {
+  position: relative;
+  width: 1.8em;
+  height: 1.8em;
+}
+
+#maze div div::after {
+  position: absolute;
+  left: -3px;
+  top: -4px;
+  text-align: center;
+  text-shadow: 0 0 1px black;
+  font-size: 1.2em;
+  z-index: 10;
+}
+
+#maze div div.door.exit::after {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  content: "";
+  background: url(../images/home.png);
+  background-size: 100%;
+}
+
+#maze div div.evcharger::after {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  content: "";
+  background: url(../images/charger.png);
+  background-size: 100%;
+}
+
+#maze div.thermo::after {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  content: "";
+  background: url(../images/smartthermo.png);
+  background-size: 100%;
+}
+
+#maze div.heatpump::after {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  content: "";
+  background: url(../images/heatpump.png);
+  background-size: 100%;
+}
+
+#maze div.bioenergy::after {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  content: "";
+  background: url(../images/bioenergy.png);
+  background-size: 100%;
+}
+
+#maze div.solar::after {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  content: "";
+  background: url(../images/solarpanel.png);
+  background-size: 100%;
+}
+
+#maze div.hero::after {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  content: "";
+  background: url(../images/elfie.png);
+  background-size: 100%;
+
+}
+
+#maze.face-right div.hero::after {
+  transform: scale(-1, 1);
+}
+
+#maze div div.wall,
+#maze div div.nubbin.wall,
+#maze div div.door.exit {
+  background-color: #85B1F2;
+  background-image: linear-gradient(45deg, #698CBF 25%, transparent 55%);
+  background-size: 1.8em;
+}
+
+#maze div div.nubbin.wall::after {
+  content: "";
+}
+
+#maze div div.sentinel.wall {
+  background: transparent;
+}
+
+#maze div div.sentinel.wall::after {
+  content: "\1F40A";
+}
+
+#maze div.sentinel.wall:nth-of-type(3n)::after {
+  content: "\1F40D";
+}
+
+#maze div div.key::after {
+  width: 1.8em;
+  height: 1.8em;
+  content: "";
+  background: url(../images/sweater.png);
+  background-size: 100%;
+}
+
+#maze div div.sweater::after {
+  width: 1.8em;
+  height: 1.8em;
+  content: "";
+  background: url(../images/sweater.png);
+  background-size: 100%;
+}
+
+#maze div div:nth-child(odd) {
+  width: 1.8em;
+}
+
+#maze div:nth-child(odd) div {
+  height: 1.8em;
+}
+
+#maze.finished::after {
+  /* position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -345,63 +391,73 @@ text-align:center;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
     color: #fff;
     z-index: 10; */
-  }
+}
 
-  
-  #maze_output {
-    z-index: 14;
-    grid-column:3/4;
-    grid-row:2/3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#maze_output {
+  z-index: 14;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  }
-  #maze_score, #maze_message {
-    font-family: 'avenir_next_lt_probold', sans-serif;
-  }
+}
 
+#maze_score,
+#maze_message {
+  font-family: 'avenir_next_lt_probold', sans-serif;
+}
 
-  #maze_scoreboard {
-    grid-column: 2/3;
-    grid-row:2/3;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size:1em;
-    flex-flow: column;
-  }
+#maze_scoreboard {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+  flex-flow: column;
+}
 
-  #maze_scoreboard::before {
-    content: "Dunsky Donation";
-    font-size:0.6em;
-    text-transform:uppercase;
-  }
+#maze_scoreboard::before {
+  content: "Dunsky Donation";
+  font-size: 0.6em;
+  text-transform: uppercase;
+}
 
-  #maze_score::before {
-    content: "Score: ";
-  }
+#maze_score::before {
+  content: "Score: ";
+}
 
-  #maze_score.sweater::after {
-    content: "";
-    background: url(../images/sweater.png);
-    background-size: 100%;
-  }
+#maze_score.sweater::after {
+  content: "";
+  background: url(../images/sweater.png);
+  background-size: 100%;
+}
 
-  #maze_message {
-grid-column: 2/3;
-grid-row:2/3;
-    top:25%;
-    left:0;
-    width: 100%;
-    justify-content: center;
-    text-align:center;
-    align-items: center;
-    text-transform: uppercase;
-    font-family: 'avenir_next_lt_probold', sans-serif;
-    font-size: 3em;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
-    color: #fff;
-    z-index: 10;
-  }
+#maze_message {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'avenir_next_lt_probold', sans-serif;
+  font-size: 3em;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  color: #fff;
+  z-index: 10;
+  opacity:1;
+  transition: opacity 3s ease-out;
+}
+
+.fade {
+  background:red;
+}
+
+.smcx-widget .smcx-embed .smcx-show .smcx-widget-dark {
+display:flex;
+justify-content: center;
+align-items: center;
+}

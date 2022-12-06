@@ -58,8 +58,7 @@ function Position(x, y) {
 
     var mazeScoreDiv = document.createElement("div");
     mazeScoreDiv.id ="maze_scoreboard";
-    
-
+        
     mazeScoreDiv.appendChild(this.mazeScore);
     mazeScoreDiv.appendChild(this.mazeCounter);
 
@@ -73,7 +72,6 @@ function Position(x, y) {
   };
 
   
-  
   Mazing.prototype.enableSpeech = function() {
     this.utter = new SpeechSynthesisUtterance()
     this.setMessage(this.mazeMessage.innerText);
@@ -81,31 +79,41 @@ function Position(x, y) {
   
   Mazing.prototype.setMessage = function(text) {
     this.mazeMessage.innerHTML = text;
-    this.mazeScore.innerHTML = this.heroScore;
-    if(this.utter) {
+      this.mazeScore.innerHTML = this.heroScore;
+   if(this.utter) {
       this.utter.text = text;
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(this.utter);
-    }
+     window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(this.utter);
+   }
   };
+
 
   Mazing.prototype.heroTakeCharger = function() {
     this.maze[this.heroPos].classList.remove("evcharger");
     this.heroScore += 10;
-    this.setMessage("You got the EV charger!");
+    this.setMessage("You got an EV charger!");
+    var audio = new Audio('gain.mp3');
+    audio.loop = false;
+    audio.play(); 
   };
 
   Mazing.prototype.heroTakeThermo = function() {
     this.maze[this.heroPos].classList.remove("thermo");
     this.heroScore += 10;
-    this.setMessage("You got the smart thermostat!");
+    this.setMessage("You got a smart thermostat!");
+    var audio = new Audio('gain.mp3');
+    audio.loop = false;
+    audio.play(); 
   }
 ;
 
 Mazing.prototype.heroTakeSolar = function() {
   this.maze[this.heroPos].classList.remove("solar");
   this.heroScore += 10;
-  this.setMessage("You got solar panel!");
+  this.setMessage("You got a solar panel!");
+  var audio = new Audio('gain.mp3');
+    audio.loop = false;
+    audio.play(); 
 }
 ;
 
@@ -113,22 +121,31 @@ Mazing.prototype.heroTakeBio = function() {
   this.maze[this.heroPos].classList.remove("bioenergy");
   this.heroScore += 10;
   this.setMessage("You got bioernergy!");
+  var audio = new Audio('gain.mp3');
+    audio.loop = false;
+    audio.play(); 
 }
 ;
 
 Mazing.prototype.heroTakeHeat = function() {
   this.maze[this.heroPos].classList.remove("heatpump");
   this.heroScore += 10;
-  this.setMessage("You got the heat pump!");
+  this.setMessage("You got a heat pump!");
+  var audio = new Audio('gain.mp3');
+    audio.loop = false;
+    audio.play(); 
 }
 ;
 
   Mazing.prototype.heroTakeKey = function() {
     this.maze[this.heroPos].classList.remove("sweater");
     this.heroHasKey = true;
-    this.heroScore += 20;
+    this.heroScore += 10;
     this.mazeScore.classList.add("has-key");
     this.setMessage("You got the bonus Dunsky Holiday sweater!");
+    var audio = new Audio('gain.mp3');
+    audio.loop = false;
+    audio.play(); 
   };
   
   Mazing.prototype.gameOver = function(text) {
@@ -172,7 +189,7 @@ Mazing.prototype.heroTakeHeat = function() {
       if(this.heroHasKey) {
         this.heroWins();
       } else {
-        this.setMessage("You forgot your Dunsky holiday sweater!");
+        this.setMessage("");
         return;
       }
     }
