@@ -406,28 +406,27 @@ button {
 }
 
 #scorecounter::before {
-  content: "Dunsky Donation";
+  content: "Donation Score";
   font-size: 0.6em;
   text-transform: uppercase;
   font-family: 'avenir_next_lt_probold', sans-serif;
-color:#FFCC00;
+color:white;
 }
 
 #maze_score {
+  color:#FFCC00;
+  font-size:3em;
 }
 
-#maze_score::before {
+/*#maze_score::before {
   content: "Score: ";
-}
+  color:white;
+}*/
 
 #maze_score.sweater::after {
   content: "";
   background: url(../images/sweater.png);
   background-size: 100%;
-}
-
-#maze_score #text {
-  color:#FFCC00;
 }
 
 #scorecounter {
