@@ -58,9 +58,11 @@ function Position(x, y) {
 
     var mazeScoreDiv = document.createElement("div");
     mazeScoreDiv.id ="maze_scoreboard";
-        
+
+ 
     mazeScoreDiv.appendChild(this.mazeScore);
     mazeScoreDiv.appendChild(this.mazeCounter);
+this.mazeCounter.appendChild(this.mazeScore);
 
     this.setMessage("");
   
