@@ -65,7 +65,7 @@
   }
 
 #play-pause img {
-  width:1.4em;
+  width: 1.4em;
 }
 
 #player-container {
@@ -81,8 +81,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-position:absolute;
-top:0;
   padding:1em;
 cursor: pointer;
 z-index:98;
@@ -198,7 +196,7 @@ text-align:center;
     grid-row:1/2;
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr;
-    grid-template-rows: 0.5fr 2fr;
+    grid-template-rows: 0.3fr 2fr;
     flex-direction: row;
     max-height:100vh;
   }
@@ -244,7 +242,7 @@ text-align:center;
     background-size: 100%;
   }
 
-  #maze div.nubbin:nth-of-type(3n)::after {
+  #maze div.thermo::after {
     display: inline-block;
     width: 1.8em;
     height: 1.8em;
@@ -252,7 +250,7 @@ text-align:center;
     background: url(../images/smartthermo.png);
     background-size: 100%;
   }
-  #maze div.nubbin:nth-of-type(5n)::after {
+  #maze div.heatpump::after {
     display: inline-block;
     width: 1.8em;
     height: 1.8em;
@@ -260,7 +258,7 @@ text-align:center;
     background: url(../images/heatpump.png);
     background-size: 100%;
   }
-  #maze div.nubbin:nth-of-type(7n)::after {
+  #maze div.bioenergy::after {
     display: inline-block;
     width: 1.8em;
     height: 1.8em;
@@ -268,7 +266,7 @@ text-align:center;
     background: url(../images/bioenergy.png);
     background-size: 100%;
   }
-  #maze div.nubbin:nth-of-type(11n)::after {
+  #maze div.solar::after {
     display: inline-block;
     width: 1.8em;
     height: 1.8em;
@@ -306,6 +304,14 @@ text-align:center;
     content: "\1F40D";
   }
   #maze div div.key::after {
+    width: 1.8em;
+    height: 1.8em;
+    content: "";
+    background: url(../images/sweater.png);
+    background-size: 100%;
+  }
+
+  #maze div div.sweater::after {
     width: 1.8em;
     height: 1.8em;
     content: "";
@@ -350,10 +356,10 @@ text-align:center;
 
   }
   #maze_score, #maze_message {
-    font-family: 'avenir_next_lt_proregular', sans-serif;
-    font-weight: bold;
-    font-size: 1em;
+    font-family: 'avenir_next_lt_probold', sans-serif;
   }
+
+
   #maze_scoreboard {
     grid-column: 2/3;
     grid-row:2/3;
@@ -362,11 +368,20 @@ text-align:center;
     align-items: center;
     text-align: center;
     font-size:1em;
+    flex-flow: column;
   }
+
+  #maze_scoreboard::before {
+    content: "Dunsky Donation";
+    font-size:0.6em;
+    text-transform:uppercase;
+  }
+
   #maze_score::before {
     content: "Score: ";
   }
-  #maze_score.has-key::after {
+
+  #maze_score.sweater::after {
     content: "";
     background: url(../images/sweater.png);
     background-size: 100%;

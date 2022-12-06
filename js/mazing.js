@@ -18,6 +18,9 @@ function Position(x, y) {
   
     this.mazeScore = document.createElement("div");
     this.mazeScore.id = "maze_score";
+
+    this.mazeCounter = document.createElement("div");
+    this.mazeCounter.id = "scorecounter";
   
     this.mazeMessage = document.createElement("div");
     this.mazeMessage.id = "maze_message";
@@ -55,8 +58,10 @@ function Position(x, y) {
 
     var mazeScoreDiv = document.createElement("div");
     mazeScoreDiv.id ="maze_scoreboard";
+    
 
     mazeScoreDiv.appendChild(this.mazeScore);
+    mazeScoreDiv.appendChild(this.mazeCounter);
 
     this.setMessage("");
   
@@ -87,18 +92,39 @@ function Position(x, y) {
   Mazing.prototype.heroTakeCharger = function() {
     this.maze[this.heroPos].classList.remove("evcharger");
     this.heroScore += 10;
-    this.setMessage("Yay! You got the EV charger!");
+    this.setMessage("You got the EV charger!");
   };
 
-  Mazing.prototype.heroTakeTreasure = function() {
-    this.maze[this.heroPos].classList.remove("nubbin");
+  Mazing.prototype.heroTakeThermo = function() {
+    this.maze[this.heroPos].classList.remove("thermo");
     this.heroScore += 10;
-    this.setMessage("Yay! You collected a clean energy item");
+    this.setMessage("You got the smart thermostat!");
   }
 ;
 
+Mazing.prototype.heroTakeSolar = function() {
+  this.maze[this.heroPos].classList.remove("solar");
+  this.heroScore += 10;
+  this.setMessage("You got solar panel!");
+}
+;
+
+Mazing.prototype.heroTakeBio = function() {
+  this.maze[this.heroPos].classList.remove("bioenergy");
+  this.heroScore += 10;
+  this.setMessage("You got bioernergy!");
+}
+;
+
+Mazing.prototype.heroTakeHeat = function() {
+  this.maze[this.heroPos].classList.remove("heatpump");
+  this.heroScore += 10;
+  this.setMessage("You got the heat pump!");
+}
+;
+
   Mazing.prototype.heroTakeKey = function() {
-    this.maze[this.heroPos].classList.remove("key");
+    this.maze[this.heroPos].classList.remove("sweater");
     this.heroHasKey = true;
     this.heroScore += 20;
     this.mazeScore.classList.add("has-key");
@@ -165,7 +191,23 @@ function Position(x, y) {
       this.heroTakeCharger();
       return;
     }
-    if(nextStep.match(/key/)) {
+    if(nextStep.match(/thermo/)) {
+      this.heroTakeThermo();
+      return;
+    }
+    if(nextStep.match(/solar/)) {
+      this.heroTakeSolar();
+      return;
+    }
+    if(nextStep.match(/heatpump/)) {
+      this.heroTakeHeat();
+      return;
+    }
+    if(nextStep.match(/bioenergy/)) {
+      this.heroTakeBio();
+      return;
+    }
+    if(nextStep.match(/sweater/)) {
       this.heroTakeKey();
       return;
     }
