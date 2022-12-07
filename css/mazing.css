@@ -492,7 +492,7 @@ color: #013766;
   font-size:2.4em;
 }
 
-#maze_score::after {
+#maze_score::before {
   content: "$";
 }
 
