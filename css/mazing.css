@@ -70,7 +70,7 @@ h1 {
 }
 
 #player-container {
-  grid-column: 2/3;
+  grid-column: 1/2;
   grid-row: 1/2;
   display: flex;
   justify-content: center;
@@ -113,7 +113,7 @@ h1 {
 
 #logo {
   grid-row: 3/4;
-  grid-column: 3/4;
+  grid-column: 2/3;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -127,7 +127,7 @@ h1 {
 }
 
 #gamestart {
-  grid-column: 2/4;
+  grid-column: 1/4;
   grid-row: 1/4;
   background-color: rgba(205, 219, 240, 0.8);
   display: flex;
@@ -182,7 +182,7 @@ button {
   grid-column: 3/4;
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: 0.1fr 0.5fr 2fr 0.5fr;
+  grid-template-columns: 166px 700px;
   grid-template-rows: 0.2fr 2fr 0.2fr;
   column-gap: 0.5em;
   flex-direction: row;
@@ -191,7 +191,7 @@ button {
 
 #maze {
   position: relative;
-  grid-column: 3/4;
+  grid-column: 2/3;
   grid-row: 2/3;
   background-color: #CDDBF0;
   background-size: 8em 8em;
@@ -370,7 +370,7 @@ button {
 }
 
 #maze_scoreboard {
-  grid-column: 2/3;
+  grid-column: 1/2;
   grid-row: 2/3;
   display: flex;
   justify-content: center;
