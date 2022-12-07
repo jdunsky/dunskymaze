@@ -164,16 +164,9 @@ box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.3);
       top:0;
       left:0;
       background: #013766;
-      background: repeating-linear-gradient(
-        -45deg,
-        #013766,
-        #013766 12px,
-        #FFCC00 10px,
-        #FFCC00 23px
-      );
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      border-bottom: 0;
+      border-bottom:3px solid #FFCC00;
     }
 
   #gamestartbox:after {
@@ -184,17 +177,10 @@ box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.3);
       width: 100%;
       bottom:0;
       left:0;
-      background: #013766;
-      background: repeating-linear-gradient(
-        -45deg,
-        #013766,
-        #013766 12px,
-        #FFCC00 10px,
-        #FFCC00 23px
-      );
+      background:  #013766;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      border-bottom: 0;
+      border-top:3px solid #FFCC00;
     }
 
 
@@ -270,16 +256,9 @@ box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.3);
       top:0;
       left:0;
       background: #013766;
-      background: repeating-linear-gradient(
-        -45deg,
-        #013766,
-        #013766 12px,
-        #FFCC00 10px,
-        #FFCC00 23px
-      );
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      border-bottom: 0;
+      border-bottom:3px solid #FFCC00;
     }
 
   #gameoverbox:after {
@@ -290,17 +269,10 @@ box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.3);
       width: 100%;
       bottom:0;
       left:0;
-      background: #013766;
-      background: repeating-linear-gradient(
-        -45deg,
-        #013766,
-        #013766 12px,
-        #FFCC00 10px,
-        #FFCC00 23px
-      );
+      background:  #013766;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      border-bottom: 0;
+      border-top:3px solid #FFCC00;
     }
 
 #maze_container {
@@ -516,7 +488,7 @@ color:white;
 }
 
 #maze_score {
-  color:#FFCC00;
+  color:#013766;
   font-size:2.4em;
 }
 
@@ -536,7 +508,8 @@ color:white;
 }
 
 #scorecounter {
-  background:#013766;
+  background:white;
+  border:2px solid #013766;
   border-radius: 0.2em;
   box-sizing: border-box;
  /*border:0.5em solid #FFCC00;*/
