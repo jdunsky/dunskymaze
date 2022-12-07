@@ -417,6 +417,7 @@ color:white;
   height:7em;
   min-width:7em;
   margin:1em;
+  padding:1em;
   grid-column: 2/3;
   grid-row: 2/3;
   display: flex;

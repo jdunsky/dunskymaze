@@ -20,7 +20,7 @@
       </button>
     </div>
     <div id="gameover">
-      <h1>Congrats! The Energy Transition Elf made it home! Share your final score with Dunsky and
+      <h1>Congrats! You scored finalscore $. Share your final score with Dunsky and
         we’ll make a donation to charity.</h1>
         <script>(function (t, e, s, n) { var o, a, c; t.SMCX = t.SMCX || [], e.getElementById(n) || (o = e.getElementsByTagName(s), a = o[o.length - 1], c = e.createElement(s), c.type = "text/javascript", c.async = !0, c.id = n, c.src = "https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgdx_2BVBr8LFY_2FPWk7GyAwLv7zKmywzKpGAElM9BNRG7BlG.js", a.parentNode.insertBefore(c, a)) })(window, document, "script", "smcx-sdk");</script>
         <a style="font: 12px Helvetica, sans-serif; color: #999; text-decoration: none;" href=www.surveymonkey.com>
@@ -725,48 +725,7 @@
         
         </script> -->
 
-  <script>
-    var track = document.getElementById('track');
-
-    var controlBtn = document.getElementById('play-pause');
-
-    function playPause() {
-      if (track.paused) {
-        track.play();
-        //controlBtn.textContent = "Pause";
-        controlBtn.className = "pause";
-      } else {
-        track.pause();
-        //controlBtn.textContent = "Play";
-        controlBtn.className = "play";
-      }
-    }
-
-    controlBtn.addEventListener("click", playPause);
-    track.addEventListener("ended", function () {
-      controlBtn.className = "play";
-    });
-  </script>
-
-  <script>
-    function startGame() {
-      document.getElementById("gamestart").style.display = "none";
-    }
-  </script>
-
-  <script>
-    function playMusic() {
-      var audio = document.getElementById("track");
-      audio.play();
-    }
-  </script>
-
-  <script>
-    function stopMusic (){
-      var audio = document.getElementById("track");
-      audio.pause();
-    }
-  </script>
+  
 
 
   <script src="js/mazing.js"></script>

@@ -2,6 +2,48 @@
 // Original JavaScript code by Chirp Internet: chirpinternet.eu
 // Please acknowledge use of this code by including this header.
 
+
+    var track = document.getElementById('track');
+
+    var controlBtn = document.getElementById('play-pause');
+
+    function playPause() {
+      if (track.paused) {
+        track.play();
+        //controlBtn.textContent = "Pause";
+        controlBtn.className = "pause";
+      } else {
+        track.pause();
+        //controlBtn.textContent = "Play";
+        controlBtn.className = "play";
+      }
+    }
+
+    controlBtn.addEventListener("click", playPause);
+    track.addEventListener("ended", function () {
+      controlBtn.className = "play";
+    });
+
+
+
+    function startGame() {
+      document.getElementById("gamestart").style.display = "none";
+    }
+
+
+
+    function playMusic() {
+      var audio = document.getElementById("track");
+      audio.play();
+    }
+
+
+    function stopMusic (){
+      var audio = document.getElementById("track");
+      audio.pause();
+    }
+ 
+
 function Position(x, y) {
     this.x = x;
     this.y = y;
@@ -155,7 +197,12 @@ Mazing.prototype.heroTakeHeat = function() {
     document.removeEventListener("keydown", this.keyPressHandler, false);
     this.setMessage(text);
     this.mazeContainer.classList.add("finished");
+    document.body.innerHTML = document.body.innerHTML.replace('finalscore', this.heroScore);
     document.getElementById("gameover").style.display = "flex";
+    stopMusic();
+    var audio = new Audio('win.mp3');
+    audio.loop = false;
+    audio.play();
 
   };
   
