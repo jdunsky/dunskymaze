@@ -104,6 +104,7 @@ function Position(x, y) {
  
     mazeScoreDiv.appendChild(this.mazeScore);
     mazeScoreDiv.appendChild(this.mazeCounter);
+
 this.mazeCounter.appendChild(this.mazeScore);
 
     this.setMessage("");
