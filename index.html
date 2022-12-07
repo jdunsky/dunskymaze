@@ -7,17 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elfie Maze Game</title>
   <link rel="stylesheet" type="text/css" href="css/mazing.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/brands.min.js" integrity="sha256-z0T3r+4uTjAkB5CHxybF9RQwAzHEdFB5+hJe/pGAcPg=" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div id="maze_container">
     <div onclick="startGame();playMusic()" id="gamestart">
-      <h1>Use the arrows on your keyboard (↑)(↓)(→)(←) to move the Elf <img src="images/elfie.png"> through the maze.
+      <div id="gamestartbox">
+      <h1>Use the arrows on your keyboard <i class="far fa-caret-square-left"></i> <i class="far fa-caret-square-up"></i> <i class="far fa-caret-square-down"></i> <i class="far fa-caret-square-right"></i> to move the Elf <img src="images/elfie.png"> through the maze.
         <br> The more points you collect, the more money we’ll donate to the charity of your choice!
       </h1>
       <button>
-        <h1>Start</h1>
+        PLAY
       </button>
+    </div>
     </div>
     <div id="gameover">
       <h1>Congrats! You scored finalscore $. Share your final score with Dunsky and

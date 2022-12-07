@@ -118,11 +118,12 @@ h1 {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  margin-top:0.5em;
 }
 
 
 #logo img {
-  max-width: 200px;
+  max-width: 150px;
 
 }
 
@@ -135,7 +136,63 @@ h1 {
   align-items: center;
   flex-direction: column;
   z-index: 98;
+  
+    height: 100%;
 }
+
+#gamestartbox {
+  position: relative;
+  padding:2em;
+  background:white;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-flow: column;
+box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.3);
+}
+
+#gamestartbox:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 12px;
+      width: 100%;
+      top:0;
+      left:0;
+      background: #013766;
+      background: repeating-linear-gradient(
+        -45deg,
+        #013766,
+        #013766 12px,
+        #FFCC00 10px,
+        #FFCC00 23px
+      );
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-bottom: 0;
+    }
+
+  #gamestartbox:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 12px;
+      width: 100%;
+      bottom:0;
+      left:0;
+      background: #013766;
+      background: repeating-linear-gradient(
+        -45deg,
+        #013766,
+        #013766 12px,
+        #FFCC00 10px,
+        #FFCC00 23px
+      );
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-bottom: 0;
+    }
+
 
 #gamestart img {
   max-width: 2em;
@@ -155,8 +212,16 @@ h1 {
 }
 
 button {
-  margin-top: 1em;
-  font-family: 'avenir_next_lt_proregular' sans-serif;
+  margin-top: 0.2em;
+  font-family: 'avenir_next_lt_probold', sans-serif;
+  font-size:1.4em;
+  color:#013766;
+  background:#FFCC00;
+  padding:0.5em;
+  border:none;
+  border-radius: 10%;
+  text-transform: uppercase;
+  cursor:pointer;
 }
 
 #gameover {
@@ -354,7 +419,7 @@ button {
 
 #maze_output {
   z-index: 14;
-  grid-column: 1/3;
+  grid-column: 2/3;
   grid-row: 2/3;
   display: flex;
   align-items: center;
@@ -425,6 +490,7 @@ color:white;
 }
 
 #maze_message {
+  position:absolute;
   grid-column: 2/3;
   grid-row: 2/3;
   width: 100%;
