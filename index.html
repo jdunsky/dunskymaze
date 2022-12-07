@@ -15,8 +15,8 @@
   <div id="maze_container">
     <div onclick="startGame();playMusic()" id="gamestart">
       <div id="gamestartbox">
-      <h1>Use the arrows on your keyboard <i class="far fa-caret-square-left"></i> <i class="far fa-caret-square-up"></i> <i class="far fa-caret-square-down"></i> <i class="far fa-caret-square-right"></i> to move the Elf <img src="images/elfie.png"> through the maze.
-        <br> The more points you collect, the more money we’ll donate to the charity of your choice!
+      <h1>Use the arrows on your keyboard <i class="far fa-caret-square-left"></i> <i class="far fa-caret-square-up"></i> <i class="far fa-caret-square-down"></i> <i class="far fa-caret-square-right"></i> to move the Elf<img src="images/elfie.png">through the maze.
+        <br><strong> The more points you collect, the more money we’ll donate to the charity of your choice!</strong>
       </h1>
       <button>
         PLAY
@@ -24,11 +24,13 @@
     </div>
     </div>
     <div id="gameover">
-      <h1>Congrats! You scored finalscore $. Share your final score with Dunsky and
-        we’ll make a donation to charity.</h1>
+      <div id="gameoverbox">
+      <h1>Congrats! You scored <strong>finalscore $</strong>.<!--Share your final score with Dunsky and
+        we’ll make a donation to charity.--></h1>
         <script>(function (t, e, s, n) { var o, a, c; t.SMCX = t.SMCX || [], e.getElementById(n) || (o = e.getElementsByTagName(s), a = o[o.length - 1], c = e.createElement(s), c.type = "text/javascript", c.async = !0, c.id = n, c.src = "https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgdx_2BVBr8LFY_2FPWk7GyAwLv7zKmywzKpGAElM9BNRG7BlG.js", a.parentNode.insertBefore(c, a)) })(window, document, "script", "smcx-sdk");</script>
         <a style="font: 12px Helvetica, sans-serif; color: #999; text-decoration: none;" href=www.surveymonkey.com>
           Create your own user feedback survey </a>
+        </div>
     </div>
     <div id="logo"><img src="images/dunsky_logo_en.png" alt="Dunsky logo"></div>
     <div id="maze" data-steps="2">

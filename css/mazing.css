@@ -65,6 +65,10 @@ h1 {
   font-family: 'avenir_next_lt_proregular', sans-serif;
 }
 
+strong {
+  font-family: 'avenir_next_lt_probold', sans-serif;
+}
+
 #play-pause img {
   width: 1.4em;
 }
@@ -136,8 +140,7 @@ h1 {
   align-items: center;
   flex-direction: column;
   z-index: 98;
-  
-    height: 100%;
+height: 100%;
 }
 
 #gamestartbox {
@@ -201,7 +204,7 @@ box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.3);
 #gamestart h1 {
 
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .points {
@@ -218,28 +221,79 @@ button {
   color:#013766;
   background:#FFCC00;
   padding:0.5em;
-  border:none;
-  border-radius: 10%;
+  border: 0.1em solid #013766 ;
+  border-radius: 0.5em;
   text-transform: uppercase;
   cursor:pointer;
+  box-shadow: 0px 2px 2px rgba(51, 51, 51, 0.3);
 }
+
 
 #gameover {
-  grid-column:1/3;
-  grid-row:1/4;
-  display: none;
-  background-color: rgba(205, 219, 240, 0.6);
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display:none;
   z-index: 100;
-  font-family: 'avenir_next_lt_proregular', sans-serif;
-  text-align: center;
+    grid-column: 1/3;
+    grid-row: 1/4;
+    background-color: rgba(205, 219, 240, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  height: 100%;
 }
 
-#gameover h1 {
-  margin: 2em;
+#gameoverbox {
+  position: relative;
+  padding:2em;
+  background:white;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-flow: column;
+width:80%;
+box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.3);
 }
+
+#gameoverbox:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 12px;
+      width: 100%;
+      top:0;
+      left:0;
+      background: #013766;
+      background: repeating-linear-gradient(
+        -45deg,
+        #013766,
+        #013766 12px,
+        #FFCC00 10px,
+        #FFCC00 23px
+      );
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-bottom: 0;
+    }
+
+  #gameoverbox:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 12px;
+      width: 100%;
+      bottom:0;
+      left:0;
+      background: #013766;
+      background: repeating-linear-gradient(
+        -45deg,
+        #013766,
+        #013766 12px,
+        #FFCC00 10px,
+        #FFCC00 23px
+      );
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-bottom: 0;
+    }
 
 #maze_container {
   position: relative;
