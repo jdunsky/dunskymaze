@@ -182,7 +182,7 @@ button {
   grid-column: 3/4;
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr;
+  grid-template-columns: 0.1fr 0.5fr 2fr 0.5fr;
   grid-template-rows: 0.2fr 2fr 0.2fr;
   column-gap: 0.5em;
   flex-direction: row;
@@ -415,7 +415,7 @@ color:white;
   box-sizing: border-box;
  /*border:0.5em solid #FFCC00;*/
   height:7em;
-  width:100%;
+  min-width:7em;
   margin:1em;
   grid-column: 2/3;
   grid-row: 2/3;
