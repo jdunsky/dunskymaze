@@ -73,7 +73,7 @@ h1 {
   grid-column: 1/2;
   grid-row: 1/2;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -127,7 +127,7 @@ h1 {
 }
 
 #gamestart {
-  grid-column: 1/4;
+  grid-column: 1/3;
   grid-row: 1/4;
   background-color: rgba(205, 219, 240, 0.8);
   display: flex;
@@ -160,10 +160,9 @@ button {
 }
 
 #gameover {
+  grid-column:1/3;
+  grid-row:1/4;
   display: none;
-  position: absolute;
-  min-height: 100vh;
-  min-width: 100vw;
   background-color: rgba(205, 219, 240, 0.6);
   justify-content: center;
   align-items: center;
@@ -204,8 +203,8 @@ button {
 
 #maze div div {
   position: relative;
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
 }
 
 #maze div div::after {
@@ -220,8 +219,8 @@ button {
 
 #maze div div.door.exit::after {
   display: inline-block;
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   content: "";
   background: url(../images/home.png);
   background-size: 100%;
@@ -229,8 +228,8 @@ button {
 
 #maze div div.evcharger::after {
   display: inline-block;
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   content: "";
   background: url(../images/charger.png);
   background-size: 100%;
@@ -238,8 +237,8 @@ button {
 
 #maze div.thermo::after {
   display: inline-block;
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   content: "";
   background: url(../images/smartthermo.png);
   background-size: 100%;
@@ -247,8 +246,8 @@ button {
 
 #maze div.heatpump::after {
   display: inline-block;
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   content: "";
   background: url(../images/heatpump.png);
   background-size: 100%;
@@ -256,8 +255,8 @@ button {
 
 #maze div.bioenergy::after {
   display: inline-block;
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   content: "";
   background: url(../images/bioenergy.png);
   background-size: 100%;
@@ -265,8 +264,8 @@ button {
 
 #maze div.solar::after {
   display: inline-block;
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   content: "";
   background: url(../images/solarpanel.png);
   background-size: 100%;
@@ -274,8 +273,8 @@ button {
 
 #maze div.hero::after {
   display: inline-block;
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   content: "";
   background: url(../images/elfie.png);
   background-size: 100%;
@@ -291,7 +290,7 @@ button {
 #maze div div.door.exit {
   background-color: #85B1F2;
   background-image: linear-gradient(45deg, #698CBF 25%, transparent 55%);
-  background-size: 1.8em;
+  background-size: 1.7em;
 }
 
 #maze div div.nubbin.wall::after {
@@ -311,27 +310,27 @@ button {
 }
 
 #maze div div.key::after {
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   content: "";
   background: url(../images/sweater.png);
   background-size: 100%;
 }
 
 #maze div div.sweater::after {
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   content: "";
   background: url(../images/sweater.png);
   background-size: 100%;
 }
 
 #maze div div:nth-child(odd) {
-  width: 1.8em;
+  width: 1.7em;
 }
 
 #maze div:nth-child(odd) div {
-  height: 1.8em;
+  height: 1.7em;
 }
 
 #maze.finished::after {
@@ -355,7 +354,7 @@ button {
 
 #maze_output {
   z-index: 14;
-  grid-column: 3/4;
+  grid-column: 1/3;
   grid-row: 2/3;
   display: flex;
   align-items: center;
