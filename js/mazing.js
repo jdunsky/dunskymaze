@@ -12,10 +12,16 @@
         track.play();
         //controlBtn.textContent = "Pause";
         controlBtn.className = "pause";
+        document.getElementById("play-pause").style.opacity = "1";
+        document.getElementById("player-onoff").innerHTML = "on";
+        document.getElementById("musicnote").style.animation = "updown 0.8s alternate infinite";
       } else {
         track.pause();
         //controlBtn.textContent = "Play";
         controlBtn.className = "play";
+        document.getElementById("play-pause").style.opacity = "0.3";
+        document.getElementById("player-onoff").innerHTML = "off";
+        document.getElementById("musicnote").style.animation = "none";
       }
     }
 
@@ -28,6 +34,9 @@
 
     function startGame() {
       document.getElementById("gamestart").style.display = "none";
+      document.getElementById("play-pause").style.opacity = "1";
+      document.getElementById("musicnote").style.animation = "updown 0.8s alternate infinite";
+      document.getElementById("player-onoff").innerHTML = "on";
     }
 
 
@@ -63,6 +72,9 @@ function Position(x, y) {
 
     this.mazeCounter = document.createElement("div");
     this.mazeCounter.id = "scorecounter";
+
+   // this.mazePointUp = document.createElement("div");
+    //this.mazePointUp.id = "pointup";
   
     this.mazeMessage = document.createElement("div");
     this.mazeMessage.id = "maze_message";
@@ -104,6 +116,7 @@ function Position(x, y) {
  
     mazeScoreDiv.appendChild(this.mazeScore);
     mazeScoreDiv.appendChild(this.mazeCounter);
+   // mazeScoreDiv.appendChild(this.mazePointUp);
 
 this.mazeCounter.appendChild(this.mazeScore);
 
@@ -248,6 +261,8 @@ Mazing.prototype.heroTakeHeat = function() {
     this.maze[this.heroPos].classList.remove("hero");
     this.maze[pos].classList.add("hero");
     this.heroPos = pos;
+    //this.mazePointUp.style.visibility = "hidden";
+    //this.mazePointUp.style.transition = "2s ease";
   
     // after moving
     if(nextStep.match(/nubbin/)) {
@@ -256,6 +271,8 @@ Mazing.prototype.heroTakeHeat = function() {
     }
     if(nextStep.match(/evcharger/)) {
       this.heroTakeCharger();
+      //this.mazePointUp.style.visibility = "visible";
+      //this.mazePointUp.style.transition = "2s ease";
       return;
     }
     if(nextStep.match(/thermo/)) {

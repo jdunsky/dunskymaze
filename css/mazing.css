@@ -70,9 +70,14 @@ strong {
   font-family: 'avenir_next_lt_probold', sans-serif;
 }
 
-#play-pause img {
+#musicnote {
   width: 1.4em;
 }
+
+@keyframes updown {
+  0% {transform: scale(100%);}
+   100% {transform: scale(118%);}
+  }
 
 #player-container {
   grid-column: 1/2;
@@ -90,12 +95,14 @@ strong {
   padding: 1em;
   cursor: pointer;
   z-index: 98;
+  opacity:0.3;
+  content: '';
 }
 
-#player-container p {
+#player-onoff {
   display: flex;
   margin: 0;
-  font-family: 'avenir_next_lt_proregular', sans-serif;
+  font-family: 'avenir_next_lt_prodemi', sans-serif;
   font-size: 0.8em;
 }
 
@@ -131,6 +138,20 @@ strong {
   max-width: 250px;
 
 }
+
+/* #pointup {
+  visibility:hidden;
+}
+
+#pointup::before {
+  content:'+10';
+  height:2em;
+  width:2em;
+  font-size:0.8em;
+  font-family:'avenir_next_lt_probold', sans-serif;
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+  color:#FFCC00;
+} */
 
 #gamestart {
   grid-column: 1/3;
