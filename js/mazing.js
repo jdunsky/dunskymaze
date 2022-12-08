@@ -214,6 +214,8 @@ Mazing.prototype.heroTakeHeat = function() {
     document.body.innerHTML = document.body.innerHTML.replace('finalscore', this.heroScore);
     document.getElementById("gameover").style.display = "flex";
     stopMusic();
+    document.getElementById("player-onoff").innerHTML = "off";
+    document.getElementById("musicnote").style.animation = "none";
     var audio = new Audio('win.mp3');
     audio.loop = false;
     audio.play();
