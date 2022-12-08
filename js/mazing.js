@@ -178,7 +178,7 @@ Mazing.prototype.heroTakeSolar = function() {
 Mazing.prototype.heroTakeBio = function() {
   this.maze[this.heroPos].classList.remove("bioenergy");
   this.heroScore += 10;
-  this.setMessage("You got bioernergy!");
+  this.setMessage("You got bioenergy!");
   var audio = new Audio('gain.mp3');
     audio.loop = false;
     audio.play(); 
