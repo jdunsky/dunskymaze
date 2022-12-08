@@ -14,7 +14,7 @@
         controlBtn.className = "pause";
         document.getElementById("play-pause").style.opacity = "1";
         document.getElementById("player-onoff").innerHTML = "marche";
-        document.getElementById("musicnote").style.animation = "updown 0.8s alternate infinite";
+        //document.getElementById("musicnote").style.animation = "updown 0.8s alternate infinite";
       } else {
         track.pause();
         //controlBtn.textContent = "Play";
@@ -35,7 +35,7 @@
     function startGame() {
       document.getElementById("gamestart").style.display = "none";
       document.getElementById("play-pause").style.opacity = "1";
-      document.getElementById("musicnote").style.animation = "updown 0.8s alternate infinite";
+      //document.getElementById("musicnote").style.animation = "updown 0.8s alternate infinite";
       document.getElementById("player-onoff").innerHTML = "marche";
     }
 
