@@ -83,8 +83,9 @@ strong {
   grid-column: 1/2;
   grid-row: 1/2;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  margin-right:5em;
 }
 
 #player-container #play-pause {
@@ -96,7 +97,6 @@ strong {
   cursor: pointer;
   z-index: 98;
   opacity:0.3;
-  content: '';
 }
 
 #player-onoff {
@@ -104,6 +104,7 @@ strong {
   margin: 0;
   font-family: 'avenir_next_lt_proregular', sans-serif;
   font-size: 0.8em;
+  text-align:center;
 }
 
 .play {
