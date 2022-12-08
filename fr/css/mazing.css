@@ -1,0 +1,575 @@
+@font-face {
+  font-family: 'avenir_next_lt_proregular';
+  src: url('../fonts/avenir_1-webfont.woff2') format('woff2'),
+    url('../fonts/avenir_1-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'avenir_next_lt_probold';
+  src: url('../fonts/avenir_4-webfont.woff2') format('woff2'),
+    url('../fonts/avenir_4-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'avenir_next_lt_prodemi';
+  src: url('../fonts/avenir_2-webfont.woff2') format('woff2'),
+    url('../fonts/avenir_2-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/*Keyframes*/
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+   100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+  }
+  
+  @-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+  }
+  
+  @-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+   50% {background-color:#CDDBF0;}
+   100% {background-position: 500px 1000px, 400px 400px, 300px 300px; background-color:#CDDBF0;}
+  }
+  
+  @-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+   100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+  }
+
+body {
+  max-height: 100vh;
+  margin: 0 auto;
+  background-color: #CDDBF0;
+  background-image: url('https://designshack.net/tutorialexamples/letitsnow/snow.png'), url('https://designshack.net/tutorialexamples/letitsnow/snow3.png'), url('https://designshack.net/tutorialexamples/letitsnow/snow2.png');
+  -webkit-animation: snow 20s linear infinite;
+  -moz-animation: snow 20s linear infinite;
+  -ms-animation: snow 20s linear infinite;
+  animation: snow 20s linear infinite;
+  font-family: 'avenir_next_lt_proregular', sans-serif;
+}
+
+h1 {
+  font-family: 'avenir_next_lt_proregular', sans-serif;
+  color:#333333;
+}
+
+strong {
+  font-family: 'avenir_next_lt_probold', sans-serif;
+}
+
+#musicnote {
+  width: 1.4em;
+}
+
+@keyframes updown {
+  0% {transform: scale(100%);}
+   100% {transform: scale(118%);}
+  }
+
+#player-container {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#player-container #play-pause {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  cursor: pointer;
+  z-index: 98;
+  opacity:0.3;
+  content: '';
+}
+
+#player-onoff {
+  display: flex;
+  margin: 0;
+  font-family: 'avenir_next_lt_proregular', sans-serif;
+  font-size: 0.8em;
+}
+
+.play {
+  background-image: url(../images/music.png);
+}
+
+.pause {
+  background-image: url(../images/music.png);
+}
+
+/* #maze_page {
+  display:grid;
+  grid-template-columns: 0.fr 1fr 1fr;
+  grid-template-rows: 1fr;
+    min-height:100vh;
+    min-width:100vw;
+  align-items:center;
+} */
+
+#logo {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top:0.5em;
+}
+
+
+#logo img {
+  max-width: 250px;
+
+}
+
+/* #pointup {
+  visibility:hidden;
+}
+
+#pointup::before {
+  content:'+10';
+  height:2em;
+  width:2em;
+  font-size:0.8em;
+  font-family:'avenir_next_lt_probold', sans-serif;
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+  color:#FFCC00;
+} */
+
+#gamestart {
+  grid-column: 1/3;
+  grid-row: 1/4;
+  background-color: rgba(205, 219, 240, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 98;
+height: 100%;
+}
+
+#gamestartbox {
+  position: relative;
+  padding:2em;
+  background:white;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-flow: column;
+box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.3);
+}
+
+#gamestartbox:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 12px;
+      width: 100%;
+      top:0;
+      left:0;
+      background: #013766;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-bottom:3px solid #FFCC00;
+    }
+
+  #gamestartbox:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 12px;
+      width: 100%;
+      bottom:0;
+      left:0;
+      background:  #013766;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-top:3px solid #FFCC00;
+    }
+
+
+#gamestart img {
+  max-width: 2em;
+}
+
+#gamestart h1 {
+
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.points {
+  grid-column: 1/3;
+  text-align: center;
+  background: #CDDBF0;
+
+}
+
+button {
+  margin-top: 0.2em;
+  font-family: 'avenir_next_lt_probold', sans-serif;
+  font-size:1.4em;
+  color:#013766;
+  background:white;
+  padding:0.5em;
+  border: 0.1em solid white ;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  cursor:pointer;
+  box-shadow: 0px 1px 0px 2px rgba(51, 51, 51, 0.3);
+}
+
+button:hover {
+   background:#FFCC00;
+  transition: 0.2s ease;
+  transform: translateY(2px);
+}
+
+
+#gameover {
+  display:none;
+  z-index: 100;
+    grid-column: 1/3;
+    grid-row: 1/4;
+    background-color: rgba(205, 219, 240, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  height: 100%;
+}
+
+#gameoverbox {
+  position: relative;
+  padding:2em;
+  background:white;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-flow: column;
+width:80%;
+top:1em;
+box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.3);
+}
+
+#gameoverbox:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 12px;
+      width: 100%;
+      top:0;
+      left:0;
+      background: #013766;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-bottom:3px solid #FFCC00;
+    }
+
+  #gameoverbox:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 12px;
+      width: 100%;
+      bottom:0;
+      left:0;
+      background:  #013766;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-top:3px solid #FFCC00;
+    }
+
+#maze_container {
+  position: relative;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 166px 700px;
+  grid-template-rows: 0.2fr 2fr 0.2fr;
+  column-gap: 0.5em;
+  flex-direction: row;
+  max-height: 100vh;
+}
+
+#maze {
+  position: relative;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: #CDDBF0;
+  background-size: 8em 8em;
+  justify-self: center;
+}
+
+#maze div {
+  display: flex;
+}
+
+#maze div div {
+  position: relative;
+  width: 1.7em;
+  height: 1.7em;
+}
+
+#maze div div::after {
+  position: absolute;
+  left: -3px;
+  top: -4px;
+  text-align: center;
+  text-shadow: 0 0 1px black;
+  font-size: 1.2em;
+  z-index: 10;
+}
+
+#maze div div.door.exit::after {
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  content: "";
+  background: url(../images/home.png);
+  background-size: 100%;
+}
+
+#maze div div.evcharger::after {
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  content: "";
+  background: url(../images/charger.png);
+  background-size: 100%;
+}
+
+#maze div.thermo::after {
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  content: "";
+  background: url(../images/smartthermo.png);
+  background-size: 100%;
+}
+
+#maze div.heatpump::after {
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  content: "";
+  background: url(../images/heatpump.png);
+  background-size: 100%;
+}
+
+#maze div.bioenergy::after {
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  content: "";
+  background: url(../images/bioenergy.png);
+  background-size: 100%;
+}
+
+#maze div.solar::after {
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  content: "";
+  background: url(../images/solarpanel.png);
+  background-size: 100%;
+}
+
+#maze div.hero::after {
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  content: "";
+  background: url(../images/elfie.png);
+  background-size: 100%;
+
+}
+
+#maze.face-right div.hero::after {
+  transform: scale(-1, 1);
+}
+
+#maze div div.wall,
+#maze div div.nubbin.wall,
+#maze div div.door.exit {
+  background-color: #85B1F2;
+  background-image: linear-gradient(45deg, #698CBF 25%, transparent 55%);
+  background-size: 1.7em;
+}
+
+#maze div div.nubbin.wall::after {
+  content: "";
+}
+
+#maze div div.sentinel.wall {
+  background: transparent;
+}
+
+#maze div div.sentinel.wall::after {
+  content: "\1F40A";
+}
+
+#maze div.sentinel.wall:nth-of-type(3n)::after {
+  content: "\1F40D";
+}
+
+#maze div div.key::after {
+  width: 1.7em;
+  height: 1.7em;
+  content: "";
+  background: url(../images/sweater.png);
+  background-size: 100%;
+}
+
+#maze div div.sweater::after {
+  width: 1.7em;
+  height: 1.7em;
+  content: "";
+  background: url(../images/sweater.png);
+  background-size: 100%;
+}
+
+#maze div div:nth-child(odd) {
+  width: 1.7em;
+}
+
+#maze div:nth-child(odd) div {
+  height: 1.7em;
+}
+
+#maze.finished::after {
+  /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    content: "Thanks for playing!";
+    background: rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    font-family: 'avenir_next_lt_probold', sans-serif;
+    font-size: 5em;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    color: #fff;
+    z-index: 10; */
+}
+
+#maze_output {
+  z-index: 14;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#maze_score,
+#maze_message {
+  font-family: 'avenir_next_lt_probold', sans-serif;
+  color:white;
+}
+
+#maze_scoreboard {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+  flex-flow: column;
+  position:relative;
+}
+
+#scorecounter::before {
+  content: "You raised";
+  font-size: 0.6em;
+  text-transform: uppercase;
+  font-family: 'avenir_next_lt_probold', sans-serif;
+color: #013766;
+}
+
+#maze_score {
+  color:#013766;
+  font-size:2.4em;
+}
+
+#maze_score::before {
+  content: "$";
+}
+
+/*#maze_score::before {
+  content: "Score: ";
+  color:white;
+}*/
+
+#maze_score.sweater::after {
+  content: "";
+  background: url(../images/sweater.png);
+  background-size: 100%;
+}
+
+#scorecounter {
+  background:white;
+  border:2px solid #013766;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+ /*border:0.5em solid #FFCC00;*/
+  height:7em;
+  min-width:7em;
+  margin:1em;
+  padding:1em;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  box-shadow: 0px 1px 1px rgba(51, 51, 51, 0.3);
+}
+
+#maze_message {
+  position:absolute;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'avenir_next_lt_probold', sans-serif;
+  font-size: 3em;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+  color: #013766;
+  z-index: 10;
+  opacity:1;
+  transition: opacity 3s ease-out;
+}
+
+.fade {
+  background:red;
+}
+
+.smcx-widget .smcx-embed .smcx-show .smcx-widget-dark {
+display:flex;
+justify-content: center;
+align-items: center;
+}
