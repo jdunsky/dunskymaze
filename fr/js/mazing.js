@@ -149,7 +149,7 @@ this.mazeCounter.appendChild(this.mazeScore);
   Mazing.prototype.heroTakeCharger = function() {
     this.maze[this.heroPos].classList.remove("evcharger");
     this.heroScore += 10;
-    this.setMessage("Vous avez obtenu la borne de recharge !");
+    this.setMessage("Vous avez récolté la borne de recharge !");
     var audio = new Audio('gain.mp3');
     audio.loop = false;
     audio.play(); 
@@ -158,7 +158,7 @@ this.mazeCounter.appendChild(this.mazeScore);
   Mazing.prototype.heroTakeThermo = function() {
     this.maze[this.heroPos].classList.remove("thermo");
     this.heroScore += 10;
-    this.setMessage("Vous avez obtenu le thermostat intelligent !");
+    this.setMessage("Vous avez récolté le thermostat intelligent !");
     var audio = new Audio('gain.mp3');
     audio.loop = false;
     audio.play(); 
@@ -168,7 +168,7 @@ this.mazeCounter.appendChild(this.mazeScore);
 Mazing.prototype.heroTakeSolar = function() {
   this.maze[this.heroPos].classList.remove("solar");
   this.heroScore += 10;
-  this.setMessage("Vous avez obtenu le panneau solaire !");
+  this.setMessage("Vous avez récolté le panneau solaire !");
   var audio = new Audio('gain.mp3');
     audio.loop = false;
     audio.play(); 
@@ -178,7 +178,7 @@ Mazing.prototype.heroTakeSolar = function() {
 Mazing.prototype.heroTakeBio = function() {
   this.maze[this.heroPos].classList.remove("bioenergy");
   this.heroScore += 10;
-  this.setMessage("Vous avez obtenu la bioénergie !");
+  this.setMessage("Vous avez récolté la bioénergie !");
   var audio = new Audio('gain.mp3');
     audio.loop = false;
     audio.play(); 
@@ -188,7 +188,7 @@ Mazing.prototype.heroTakeBio = function() {
 Mazing.prototype.heroTakeHeat = function() {
   this.maze[this.heroPos].classList.remove("heatpump");
   this.heroScore += 10;
-  this.setMessage("Vous avez obtenu la thermopompe !");
+  this.setMessage("Vous avez récolté la thermopompe !");
   var audio = new Audio('gain.mp3');
     audio.loop = false;
     audio.play(); 
@@ -200,7 +200,7 @@ Mazing.prototype.heroTakeHeat = function() {
     this.heroHasKey = true;
     this.heroScore += 10;
     this.mazeScore.classList.add("has-key");
-    this.setMessage("Vous avez obtenu le chandail des Fêtes Dunsky !");
+    this.setMessage("Vous avez récolté le chandail des Fêtes Dunsky !");
     var audio = new Audio('gain.mp3');
     audio.loop = false;
     audio.play(); 
