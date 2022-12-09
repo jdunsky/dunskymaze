@@ -502,7 +502,7 @@ box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.3);
 }
 
 #scorecounter::before {
-  content: "Vous avez ammasé";
+  content: "Vous avez amassé";
   font-size: 0.6em;
   text-transform: uppercase;
   font-family: 'avenir_next_lt_probold', sans-serif;
