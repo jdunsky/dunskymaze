@@ -256,6 +256,10 @@ button:hover {
   height: 100%;
 }
 
+#gameover h1 {
+  text-align:center;
+}
+
 #gameoverbox {
   position: relative;
   padding:2em;
